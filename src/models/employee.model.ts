@@ -1,7 +1,7 @@
 import { Model, Table, Column, DataType } from 'sequelize-typescript';
 
 @Table({ tableName: 'employee', timestamps: true })
-export class Employeee extends Model {
+export class Employee extends Model {
   @Column({ type: DataType.INTEGER, primaryKey: true, autoIncrement: true })
   employeeId: number;
 

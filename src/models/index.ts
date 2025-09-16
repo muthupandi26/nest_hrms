@@ -1,6 +1,6 @@
 import { Company } from './company.model';
 import { Department } from './department.model';
-import { Employeee } from './employee.model';
+import { Employee } from './employee.model';
 import { EmployeeDocument } from './employeeDocument.model';
 import { Expense } from './expense.model';
 import { Income } from './income.model';
@@ -15,7 +15,7 @@ import { User } from './user.model';
 export const models = [
   Company,
   Department,
-  Employeee,
+  Employee,
   User,
   EmployeeDocument,
   PromotionSalaryHistory,
