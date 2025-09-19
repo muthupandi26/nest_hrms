@@ -5,10 +5,13 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { User } from 'src/models/user.model';
 import { ConfigService, ConfigModule } from '@nestjs/config';
+import { PassportModule } from '@nestjs/passport';
+import { JwtStrategy } from './jwt.strategy';
 
 @Module({
   imports: [
     ConfigModule,
+    PassportModule,
     SequelizeModule.forFeature([User]),
     JwtModule.registerAsync({
       imports: [ConfigModule],
@@ -19,7 +22,7 @@ import { ConfigService, ConfigModule } from '@nestjs/config';
       }),
     }),
   ],
-  providers: [AuthService],
+  providers: [AuthService, JwtStrategy],
   controllers: [AuthController],
 })
 export class AuthModule {}
